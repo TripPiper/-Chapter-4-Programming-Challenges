@@ -1,0 +1,57 @@
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+import java.util.Scanner;
+/**
+ *
+ * @author Tutor
+ */
+public class LogicalOperatorsComparingStringObjects 
+{
+    public static void main(String[]args)
+    {
+     String input;
+     String name1;
+     String name2;
+     //3.20
+     
+       input=JOptionPane.showInputDialog("Enter your name. ");
+        if(input.equals("Timothy"))
+             JOptionPane.showMessageDialog(null," Do I know you ? ");  
+        else
+       //System.out.println(z=0);
+        JOptionPane.showMessageDialog(null,"I don't know you ."); 
+        
+     //3.21
+     name1=JOptionPane.showInputDialog("Enter your name. ");
+     name2=JOptionPane.showInputDialog("Enter your name2. ");
+     
+     if(name1.compareTo(name2)==0)
+     {
+          JOptionPane.showMessageDialog(null,name1 + " is equal to " + name2); 
+     }
+          else if(name1.compareTo(name2) < 0)
+              
+          {
+           JOptionPane.showMessageDialog(null,name1 + " , " + name2); 
+       
+          }
+      else if(name1.compareTo(name2) > 0)
+              
+          {
+           JOptionPane.showMessageDialog(null,name2 + " , " +name1); 
+       
+         }
+     
+       
+     
+     input=JOptionPane.showInputDialog(" Enter your name. ");
+        if(input.equalsIgnoreCase("Timothy"))
+             JOptionPane.showMessageDialog(null," Do I know you ? ");  
+        else
+       //System.out.println(z=0);
+        JOptionPane.showMessageDialog(null,"I don't know you ."); 
+       
+       System.exit(0);
+    }
+    
+}
