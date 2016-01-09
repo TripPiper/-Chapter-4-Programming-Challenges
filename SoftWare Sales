@@ -1,0 +1,43 @@
+  import javax.swing.JFrame;
+     import javax.swing.JOptionPane;
+     import java.util.*;
+/**
+/**
+ *
+ * @author Tutor
+ */
+public class SoftwareSAles {
+    
+ public static void main(String [] args)
+ {
+  {
+ int score1,score2,score3;
+ String input1,input2, input3;
+ int average;
+ 
+         input1 = JOptionPane.showInputDialog(" How many packages did you purchase? ");
+         average = Integer.parseInt(input1); 
+         
+       
+    
+    if (average >= 100)
+           JOptionPane.showMessageDialog(null," Your discount is " + (99*average)*.50 );
+   
+    else if (average >=50 && average <=99)
+           JOptionPane.showMessageDialog(null," Your discount is "+ (99*average) *.40);
+    else if (average >=20 && average <=49)
+           JOptionPane.showMessageDialog(null," Your discount is " + (99*average) *.30);
+    else if (average >=10 && average <=19)
+           JOptionPane.showMessageDialog(null," Your discount is " + (99*average) *.20);
+    
+    else   JOptionPane.showMessageDialog(null," Your discount is 0 ");
+       
+    
+    System.exit(0);   
+ }
+    
+    
+    
+    
+}
+}
