@@ -1,0 +1,34 @@
+    import java.util.*;    //Needed for scanner class
+    import java.io.*;     // Needed for File I/O classes
+    
+    
+    public class FileSum {
+    public static void main(String[] args) throws IOException 
+    {
+     
+   double sum =0.0 ; // Accumulator , initialized to 0
+   
+    // Open the file for reading.
+    File file =new File ("CreateNumbers2.txt ");
+    Scanner inputFile =new Scanner(file);
+   
+    // REad all values from files
+    // and calculate their total
+   while (inputFile.hasNext()) 
+       
+   {
+       //read a value from the file
+       double number =inputFile.nextDouble();
+       //Add the number
+       sum = sum + number ;
+       
+   }
+        //close the file
+        inputFile.close();
+   
+        // display the sum of numbers.
+        System.out.println( "The sum of the number in " + " Number.txt is " + sum );
+    
+    
+}
+  }
