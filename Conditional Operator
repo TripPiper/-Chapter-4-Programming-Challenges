@@ -1,0 +1,39 @@
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+import java.util.*;
+/**
+ *
+ * @author Tutor
+ */
+public class CondtionalOperators 
+{
+  public static void main(String[]args)
+  {
+         double x;
+         double y;
+         double z;
+         String input; 
+         String input1;
+         double temp , pop,base ;
+         
+          input = JOptionPane.showInputDialog(" temp ");
+         temp= Double.parseDouble(input);
+          
+          
+          input1 = JOptionPane.showInputDialog(" base ");
+          base = Double.parseDouble(input1);
+          
+         pop = temp > 2 ? base * 10 : base * 2;
+          
+          JOptionPane.showMessageDialog(null,pop);
+          
+          
+          
+          
+          
+          
+         
+      System.exit(0);   
+  }  
+}
+
