@@ -1,0 +1,67 @@
+ import javax.swing.JFrame;
+     import javax.swing.JOptionPane;
+     import java.util.*; 
+
+
+/**
+ *
+ * @author Tutor
+ */
+public class TheSwitchStatement 
+{
+     public static void main(String[]args)
+     {
+   
+      String input;
+      int number ;
+      
+       input = JOptionPane.showInputDialog(" Enter 1, thru 10:");
+         number= Integer.parseInt(input);
+      
+         switch(number)
+         {
+             case 1:
+                  JOptionPane.showMessageDialog(null," I ");
+                  break;
+             case 2:
+                  JOptionPane.showMessageDialog(null," II ");
+                  break; 
+                  
+            case 3:
+                  JOptionPane.showMessageDialog(null," III ");
+                  break;   
+                  
+            case 4:
+                  JOptionPane.showMessageDialog(null," IV ");
+                  break; 
+            case 5:
+                  JOptionPane.showMessageDialog(null," V ");
+                  break; 
+            case 6:
+                  JOptionPane.showMessageDialog(null," VI ");
+                  break; 
+            case 7:
+                  JOptionPane.showMessageDialog(null," VII");
+            case 8:
+                  JOptionPane.showMessageDialog(null," VIII ");
+                  break; 
+            case 9:
+                  JOptionPane.showMessageDialog(null," XI");
+                  break; 
+            case 10:
+                  JOptionPane.showMessageDialog(null," X ");
+                  break; 
+                   
+                  
+            default:
+            
+                  JOptionPane.showMessageDialog(null," That is  invalid ");
+                 
+            System.exit(0);       
+                  
+         }
+         
+        
+     }
+    
+}
