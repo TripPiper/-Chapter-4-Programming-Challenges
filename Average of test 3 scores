@@ -1,0 +1,45 @@
+ import javax.swing.JFrame;
+     import javax.swing.JOptionPane;
+     import java.util.*;
+/**
+ *
+ * @author Tutor
+ */
+public class TestScorechpt3 {
+    
+    public static void main(String[]args)
+ {
+ int score1,score2,score3;
+ String input1,input2, input3;
+ int average;
+ 
+         input1 = JOptionPane.showInputDialog(" Test score 1 ");
+         score1= Integer.parseInt(input1); 
+         
+         input2 = JOptionPane.showInputDialog(" Test score 2 ");
+         score2 = Integer.parseInt(input2); 
+         
+         input3 = JOptionPane.showInputDialog(" Test score 3 ");
+         score3 = Integer.parseInt(input3); 
+         
+         average = (score1+score2+score3)/3;
+    
+    if (average >=90 && average > 100)
+           JOptionPane.showMessageDialog(null," Your average of " + average + " is an " + 'A');
+    else if (average >=80 && average <=89)
+           JOptionPane.showMessageDialog(null," Your  average of " + average + "  is a " + 'B');
+    else if (average >=70 && average <=79)
+           JOptionPane.showMessageDialog(null," Your  average of "+ average + " is a " + 'C');
+    else if (average >=60 && average <=69)
+           JOptionPane.showMessageDialog(null," Your  average of " + average + " is a " + 'D');
+    else   JOptionPane.showMessageDialog(null," Your  average of " + average + " is a " + 'F');
+       
+    
+    System.exit(0);
+    
+    
+    
+    
+ }
+    
+}
