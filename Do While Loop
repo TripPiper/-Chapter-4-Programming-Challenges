@@ -1,0 +1,54 @@
+import java.util.*;
+import javax.swing.JOptionPane;
+import java.text.*;
+/**
+ *
+ * @author Tutor
+ */
+public class doWhileLoop {
+    
+    public static void main(String[] args) {
+      int sc1,sc2,sc3; //three test scores
+      double av; //average test score
+      char repeat; // to hold y for yes or n for no
+      String input ; // to hold input
+      
+       JOptionPane.showMessageDialog(null, " This program calculates the average " + 
+               " of 3 test score");
+       
+       
+       do
+       {
+           // get first score
+        input = JOptionPane.showInputDialog(" Enter score #1.");
+                 sc1 =Integer.parseInt(input); 
+                 
+                 
+            // get second score     
+                 
+        input = JOptionPane.showInputDialog(" Enter score #2.");
+                 sc2 =Integer.parseInt(input);
+                 
+                 
+           // get score 3      
+        input = JOptionPane.showInputDialog(" Enter score #3.");
+                sc3 =Integer.parseInt(input);
+             av = (sc1+sc2+sc3)/3.0 ;  
+             
+             
+       JOptionPane.showMessageDialog(null, " The Average is " + av + ".");
+
+
+            
+        input = JOptionPane.showInputDialog(" Would you like to average another set of test score? " 
+                + "\n Enter Y for yes and N for no .");
+        repeat= input.charAt(0);
+       
+       }while (repeat == 'Y' || repeat == 'y');
+        
+       
+       
+       System.exit(0);
+    }
+    
+}
