@@ -1,0 +1,35 @@
+ import javax.swing.JFrame;
+     import javax.swing.JOptionPane;
+     import java.util.*;
+     
+/**
+ *
+ * @author Tutor
+ */
+class ShippingCharges {
+    
+    public static void main (String[] arges)
+    {
+    
+    String input;        
+    double weight ;        
+    
+        
+     
+     
+        input  =  JOptionPane.showInputDialog("Please enter weight:");
+                 weight = Double.parseDouble(input); 
+       
+         if (weight <= 2)
+              JOptionPane.showMessageDialog(null, " The charge is $1.10 per 500 miles. ");
+         else if (weight > 2 && weight <= 6)
+              JOptionPane.showMessageDialog(null, " The charge is $2.20 per 500 miles. ");
+         else if (weight >= 6 && weight <=10)
+              JOptionPane.showMessageDialog(null, " The charge is $3.70  per 500 miles. ");
+         else if  (weight > 10 )
+              JOptionPane.showMessageDialog(null, " The charge is $3.80  per 500 miles. ");
+      System.exit(0);   
+         
+    }
+    
+}
