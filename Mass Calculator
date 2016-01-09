@@ -1,0 +1,31 @@
+
+     import javax.swing.JFrame;
+     import javax.swing.JOptionPane;
+     import java.util.*;
+
+
+public class MassWeightCalculator
+{
+ public static void main(String[]args)
+ {
+     double weight , mass;
+     String inputM;
+      
+     
+       inputM = JOptionPane.showInputDialog("What is the mass  of your matter ? ");
+       mass = Double.parseDouble(inputM); 
+       weight = (mass * 9.8);
+        
+             if (mass >1000)
+           JOptionPane.showMessageDialog(null, " Too Heavy. ");
+             else if (mass < 10)
+           JOptionPane.showMessageDialog(null,  " Too Light. ");     
+             else JOptionPane.showMessageDialog(null,weight);
+       
+       
+         
+       
+       
+   System.exit(0);    
+ }    
+}
