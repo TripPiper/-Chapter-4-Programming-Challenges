@@ -1,0 +1,48 @@
+     import javax.swing.JFrame;
+     import javax.swing.JOptionPane;
+     import java.util.*; 
+/**
+ *
+ * @author Tutor
+ */
+public class Chpt3BodyMassIndex 
+{
+public static void main(String[]args)
+ {
+  double BMI ,weight ,height ;
+   String input; 
+   String input1;
+          
+          input = JOptionPane.showInputDialog(" What is your weight in pounds ? ");
+          weight= Double.parseDouble(input);
+          
+          input1 = JOptionPane.showInputDialog(" What is your height in inches? ");
+          height = Double.parseDouble(input1);
+  
+  
+  BMI= (weight *703)/(height * height);
+  
+  
+  
+         if(BMI > 18.5 && BMI < 25 )
+         //{
+                 JOptionPane.showMessageDialog(null," Your weight is optimal. ");
+         //}
+         else JOptionPane.showMessageDialog(null,BMI < 18.5 ? " You're underweight. " : " You're overweight. ") ;
+        // {
+            // JOptionPane.showMessageDialog(null," You are underweight. ");
+        // }
+        // else //(BMI > 25)
+                // {
+                // JOptionPane.showMessageDialog(null," You are overweight. ");
+                // }
+                 
+                 
+         
+        
+        System.exit(0);
+        
+         
+          
+ }
+}
