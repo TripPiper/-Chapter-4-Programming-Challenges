@@ -1,0 +1,40 @@
+
+
+
+     import javax.swing.JFrame;
+     import javax.swing.JOptionPane;
+     import java.util.*; 
+/**
+ *
+ * @author Tutor
+ */
+public class MagicDate 
+
+{
+  public static void main(String[]args)
+     {
+        String input ,input2 ,input3;
+        int month ,day ,twoDigitYear;
+        int monthXday ; 
+        
+        
+        
+        
+         input = JOptionPane.showInputDialog(" Enter the numeric form of the month ");
+         month= Integer.parseInt(input); 
+         
+         input2 = JOptionPane.showInputDialog(" Enter the day ");
+         day= Integer.parseInt(input2); 
+         
+         input3 = JOptionPane.showInputDialog(" Enter the two digit year ");
+         twoDigitYear = Integer.parseInt(input3); 
+         monthXday = month*day;
+         //JOptionPane.showMessageDialog(null,monthXday); //Tester for the monthXday vsriable
+         
+         if(monthXday == twoDigitYear)
+             JOptionPane.showMessageDialog(null," The Date is Magic ! ");
+         else JOptionPane.showMessageDialog(null," The Date is not Magic ");
+        
+        System.exit(0);
+     }    
+}
