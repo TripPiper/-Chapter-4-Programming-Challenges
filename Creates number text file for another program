@@ -1,0 +1,56 @@
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.Scanner;
+
+
+/**
+ *
+ * @author Tutor
+ */
+public class createNumberFIle 
+{
+    public static void main(String[] args) throws IOException 
+    {
+    
+    
+             
+        String fileName ;   //filename
+        String friendName;  //Friend's name
+        int numFriends ;     //number of friends
+        
+        Scanner keyboard = new Scanner(System.in);
+        
+        System.out.println
+        ("How many friends do you have? ");
+         numFriends = keyboard.nextInt();
+        
+         
+        // consume the remaining newLine characters
+         keyboard.nextLine();
+         
+         //get fileName.
+         System.out.println
+        ("Enter the file's name. ");
+          fileName = keyboard.nextLine();
+          
+          //Open the file
+          PrintWriter outputFile = new PrintWriter (fileName);
+          
+          // Get Data and write it to file.
+          
+          for (int i =1 ; i <= numFriends; i++)
+          {
+              // Get name of freind
+              System.out.println
+        ("Enter name of friend " + i + ": ");
+              friendName = keyboard.nextLine();
+              
+              //Write name to file.
+              outputFile.println(friendName);
+          }
+          // Close the file.
+          outputFile.close();
+          System.out.println("Data written to the file.");
+        }
+    
+}
