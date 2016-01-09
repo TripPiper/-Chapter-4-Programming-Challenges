@@ -1,0 +1,62 @@
+import javax.swing.JOptionPane;
+/**
+ *
+ * @author Tutor
+ */
+public class internetServiceProvider {
+    
+
+public static void main(String[] args) {
+char packageLetter;
+int hoursUsed;
+int regularHours;
+int additionalHours;
+double monthlyFee;
+double additionalHoursFee;
+double totalFee;
+String inputString;
+ 
+inputString = JOptionPane.showInputDialog("Enter the letter of the " +
+"package you purchased (either A, B, or C).");
+inputString = inputString.toUpperCase();
+packageLetter = inputString.charAt(0);
+ 
+inputString = JOptionPane.showInputDialog("Enter the number of hours " +
+"you used.");
+hoursUsed = Integer.parseInt(inputString);
+ 
+switch(packageLetter)
+{
+case 'A':
+monthlyFee = 9.95;
+regularHours = 10;
+additionalHours = hoursUsed - regularHours;
+additionalHoursFee = additionalHours * 2.00;
+totalFee = monthlyFee + additionalHoursFee;
+JOptionPane.showMessageDialog(null,"The total charges is $" +
+totalFee + ".");
+break;
+case 'B':
+monthlyFee = 13.95;
+regularHours = 20;
+additionalHours = hoursUsed - regularHours;
+additionalHoursFee = additionalHours * 1.00;
+totalFee = monthlyFee + additionalHoursFee;
+System.out.println("The total charges is " + totalFee);
+JOptionPane.showMessageDialog(null,"The total charges is $" +
+totalFee + ".");
+break;
+case 'C':
+totalFee = 19.95;
+JOptionPane.showMessageDialog(null,"The total charges is $" +
+totalFee + ".");
+break;
+default:
+JOptionPane.showMessageDialog(null,"Plea… enter either A,B, " +
+"or C).");
+}
+System.exit(0);
+ 
+}
+ 
+}
