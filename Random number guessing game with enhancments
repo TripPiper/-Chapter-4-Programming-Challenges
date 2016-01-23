@@ -1,0 +1,52 @@
+
+import java.io.IOException;
+import java.util.Scanner;
+import java.util.Random;
+
+/**
+ *
+ * @author Tutor
+ */
+public class RandomNumberGuessingGame {
+    public static void main(String[] args) throws IOException 
+    {
+        int number1 =0;
+         int max=0 ;
+         int counter = 1;
+         //Creats Scanner Object for keyboard input
+         Scanner input = new Scanner (System.in);
+         
+         // Create Random class object 
+         Random randomNumbers =new Random();
+        
+         // Get random number
+          number1 = randomNumbers.nextInt(100);
+           
+           //Test code for random number
+           System.out.println( number1); 
+          //Askes user for number
+           System.out.println(" Guess what the number is. ");
+          
+  
+         // loop to test guess
+        while ( (max = input.nextInt()) != number1)
+        {
+             
+             if (max > number1)
+                 System.out.println( " Number is too high.Try again.");
+                
+             else if(max < number1)
+                      
+              System.out.println( " Number is too low.Try again.");
+              
+             counter++;
+             
+        }
+             
+         System.out.println( "Correct guess!" );
+         System.out.println( " Number of guesses : " +counter );
+          // prevents infinit loops
+         System.exit(0);
+    }
+}
+     
