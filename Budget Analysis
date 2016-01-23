@@ -1,0 +1,55 @@
+
+import java.io.IOException;
+import java.util.Scanner;
+
+/**
+ *
+ * @author Tutor
+ */
+public class BudgetAnalysis 
+{
+     public static void main(String[] args) throws IOException 
+    {
+        
+        int number = 0;
+        double max=0,min=0, expenses =0.0 ,totalExpenses =0.0 ;
+         //Creats Scanner Object for keyboard input
+         Scanner input = new Scanner (System.in);
+         
+         // Get user's budget amount
+         System.out.println(" Enter the amount of your budget for the month. ");
+         double budget = input.nextDouble();
+         
+         // Gets the number of expenses the user has
+         System.out.println("How many expeneses do you have for the month? ");
+         number=input.nextInt();
+         
+         // loop to calculate the total expense
+       for(int i=0 ; i < number ;i++){
+         System.out.println("Enter the amount of each of your expenses for the month. ");
+         expenses = input.nextDouble();  
+  
+	         
+         
+           totalExpenses += (expenses) ; 
+            
+       }
+            
+        
+             if (  budget <  totalExpenses    ) {
+	         System.out.println( " Over Budget by :" + (budget -  totalExpenses  ));
+				 }
+	    else { System.out.println( " You're under budget by : " + (budget-totalExpenses ));
+			     } 	 
+       
+			 
+	        							 			  
+	            
+     System.exit(0);
+
+         
+         
+       
+    }
+    
+}
