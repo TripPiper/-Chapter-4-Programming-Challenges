@@ -1,0 +1,39 @@
+public class SquareDisplay {
+    
+    
+    	
+    public static void main(String[] args) throws IOException 
+    {
+            
+            int number4Square = 0; //  Hold user's input 
+            int outsideLoop; //  Holds value for outside loop
+            int insideLoop; // Holds value for inside loop
+            
+
+                // Declare keyboard as scanner type
+                 Scanner keyboard = new Scanner(System.in); 
+                
+                // Input validation
+                while (number4Square < 1 || number4Square> 16) { 
+                // Get input from the user
+                System.out.print("Please enter a value 1-15: "); 
+                number4Square = keyboard.nextInt(); } 
+            
+              
+               // Needs two for loop to create the square
+            
+                // Outside loop creates another row 
+                for(outsideLoop = 0; outsideLoop < number4Square; outsideLoop++) { 
+                // Inner loop to populate the rows with GG or whatever you decide to use
+                for(insideLoop = 0; insideLoop < number4Square; insideLoop++) 
+                { System.out.print("GG"); } 
+                
+                // Go to next line 
+                System.out.print("\n"); } 
+                
+                
+                System.exit(0);
+
+
+                        } 
+                }
