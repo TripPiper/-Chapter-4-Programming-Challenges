@@ -1,28 +1,41 @@
+public class testForPrime {
 
-import java.util.Scanner;
+    public static void main(String[] args) throws FileNotFoundException {
 
-public class primeNumbers {
+        int number;	// declare number as an int
 
-   public static void main(String[] args) {
-       Scanner s = new Scanner(System.in);
-       System.out.print("Enter a number : ");
-       int n = s.nextInt();
-       if (isPrime(n)) {
-           System.out.println(n + " is a prime number");
-       } else {
-           System.out.println(n + " is not a prime number");
-       }
-   }
+        Scanner keyboard = new Scanner(System.in); // create a scanner object
 
-   public static boolean isPrime(int n) {
-       if (n <= 1) {
-           return false;
-       }
-       for (int i = 2; i < Math.sqrt(n); i++) {
-           if (n % i == 0) {
-               return false;
-           }
-       }
-       return true;
-   }
+        // ask user for the number to check for prime
+        System.out.println("Please enter a number and the computer will"
+                + "\n determine if it is a prime number.\n");
+        number = keyboard.nextInt();
+
+        if (isPrime(number)) // check to see if method is true
+        {
+            System.out.println("Your number is prime");
+        } else // if method is false
+        {
+            System.out.println("Your number is not prime");
+        }
+
+    }
+
+    public static boolean isPrime(int number1) // method isPrime
+    {
+        for (int i = 2; i < number1; i++) // loop counter, to check if a number will divide into
+        {
+// the input number, starting at two and going until one short of input number 
+            if (number1 % i == 0) // use mod operator to check if a number will divide into equally
+            {
+                return false;
+            }
+        }
+        // use mod operator to check if a number will divide into equally
+        // if no number will divide into equally then it is a prime number
+
+        // return value
+        return true;
+    }
+
 }
